@@ -48720,8 +48720,12 @@ var StraightEdge = function (_EdgeBase) {
     value: function _line(ctx, values) {
       // draw a straight line
       ctx.beginPath();
-      ctx.moveTo(this.fromPoint.x, this.fromPoint.y);
-      ctx.lineTo(this.toPoint.x, this.toPoint.y);
+
+      this.newData = document.createElement("img");
+      this.newData.src = "https://colinbendell.cloudinary.com/image/upload/c_crop,f_auto,g_auto,h_350,w_400/v1512090971/Wizard-Clap-by-Markus-Magnusson.gif"
+      ctx.drawImage(this.newData, -78.2741537144787, -350.57025517017985, 84, 84);
+      // ctx.moveTo(this.fromPoint.x, this.fromPoint.y);
+      // ctx.lineTo(this.toPoint.x, this.toPoint.y);
       // draw shadow if enabled
       this.enableShadow(ctx, values);
       ctx.stroke();
